@@ -4,7 +4,7 @@ aptPkgs = ["...", "python3-pip"]
 # Install uv and sync dependencies
 cmds = [
   "curl -LsSf https://astral.sh/uv/install.sh | sh",
-  "uv sync --frozen --no-dev"
+  "PDM_BUILD_SCM_VERSION=1.0.0 uv sync --frozen --no-dev"
 ]
 
 # Cache uv directories for faster rebuilds
