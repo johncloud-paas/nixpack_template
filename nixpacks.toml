@@ -1,3 +1,5 @@
 # nixpacks.toml
 [start]
 cmd = "fastapi run src/nixpack_template/server.py --port 3000"
+
+# nixpacks build . -t my-app

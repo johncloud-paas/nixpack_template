@@ -600,7 +600,7 @@ wheels = [
 
 [[package]]
 name = "nixpack-template"
-version = "0.1.dev3+g39beec52a.d20250908"
+version = "0.1.dev4+gc951344.d20250908"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },

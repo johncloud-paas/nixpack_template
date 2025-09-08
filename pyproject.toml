@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=64", "setuptools-scm>=8"]
-build-backend = "setuptools.build_meta"
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
 
 [project]
 name = "nixpack_template"
@@ -20,9 +20,8 @@ Source = "https://github.com/johncloud-paas/stacks/nixpack_template"
 [tool.pylint.format]
 max-line-length = 100
 
-[tool.setuptools_scm]
-# génère un fichier Python contenant la version
-write_to = "src/nixpack_template/_version.py"
+[tool.pdm.version]
+source = "scm"
 
 [tool.black]
 line-length = 100
