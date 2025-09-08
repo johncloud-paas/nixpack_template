@@ -12,6 +12,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added _version.py ([c951344](https://github.com/johncloud-paas/nixpack_template/commit/c951344b1454095fa8a784289afd822b8176441e) by Yann de The).
+- Added _version.py ([80b1c0b](https://github.com/johncloud-paas/nixpack_template/commit/80b1c0b2a04a0c44e663171993221560333b231e) by Yann de The).
 
 <!-- insertion marker -->

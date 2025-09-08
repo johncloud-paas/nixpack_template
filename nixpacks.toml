@@ -1,5 +1,17 @@
-# nixpacks.toml
+[phases.install]
+aptPkgs = ["...", "python3-pip"]
+
+# Install uv and sync dependencies
+cmds = [
+  "curl -LsSf https://astral.sh/uv/install.sh | sh",
+  "uv sync --frozen --no-dev"
+]
+
+# Cache uv directories for faster rebuilds
+cacheDirectories = ["~/.cache/uv", ".venv"]
+
 [start]
-cmd = "fastapi run src/nixpack_template/server.py --port 3000"
+cmd = "uv run uvicorn nixpack_template.server:app --host 0.0.0.0 --port 3000"
 
 # nixpacks build . -t my-app
+# sudo docker run -p 3000:3000 my-app
