@@ -4,7 +4,7 @@ build-backend = "pdm.backend"
 
 [project]
 name = "nixpack_template"
-dynamic = ["version"]
+version = "1.0.0"
 requires-python = ">=3.11"
 readme = "README.md"
 description = ""
@@ -26,9 +26,6 @@ target-version = ['py310']
 
 [tool.uv]
 resolution = "highest"
-
-[tool.pdm.version]
-source = "scm"
 
 [dependency-groups]
 dev = [
