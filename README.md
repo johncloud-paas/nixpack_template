@@ -17,7 +17,9 @@ This project provides a clean starting point with best practices for reproducibi
 
 ## 🚀 Getting Started
 
-### 1. Clone this template
+Clone this template:
 
     git clone https://github.com/johncloud-paas/stacks/nixpack_template
     cd nixpack_template
+    nixpacks build . -t my-app
+    sudo docker run -p 3000:3000 my-app

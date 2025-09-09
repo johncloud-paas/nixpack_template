@@ -2,7 +2,7 @@
 
 .. include:: ../../README.md
 
-## Testing
+## ⚙️ Testing
 
 ### Run the tests
 
