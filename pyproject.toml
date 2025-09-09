@@ -22,8 +22,10 @@ Source = "https://github.com/johncloud-paas/stacks/nixpack_template"
 max-line-length = 100
 
 [tool.pdm.version]
+fallback_version = "1.0.0"
 source = "scm"
-tag_scheme = "node-and-timestamp"  # or "node-and-date", "dirty-tag"
+version_scheme = "guess-next-dev"
+local_scheme = "node-and-hash"
 
 [tool.black]
 line-length = 100
