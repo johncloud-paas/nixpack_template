@@ -39,6 +39,8 @@ dev = [
     "pre-commit>=4.0.1",
 ]
 doc = [
+    "docstr-coverage>=2.3.2",
+    "genbadge[all]>=1.1.1,<2.0.0",
     "pdoc3>=0.11.3",
     "pylint>=3.3.2",
 ]
@@ -53,6 +55,7 @@ test = [
     "pytest-picked>=0.5.1",
     "pytest-sugar>=1.0.0",
     "pytest-xdist>=3.6.1",
+    "coverage>=7.8.2",
     "httpx>=0.28.1",
 ]
 
