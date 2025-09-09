@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
+- Added links to coverage reports ([835b40b](https://github.com/johncloud-paas/nixpack_template/commit/835b40b40866cd0f4879eab89722696a42bec9ca) by Yann de The).
 - Added unit tests ([95e1e4a](https://github.com/johncloud-paas/nixpack_template/commit/95e1e4ada42fec345d6343426820f1fc801c2e8d) by Yann de The).
 - Added tests ([4949299](https://github.com/johncloud-paas/nixpack_template/commit/4949299b4760f95fe1d1fe1d754c2b9a913489c9) by Yann de The).
 - Added test github action ([fc355b5](https://github.com/johncloud-paas/nixpack_template/commit/fc355b5c5e5ed5abe58b39c3f560d15281654400) by Yann de The).
