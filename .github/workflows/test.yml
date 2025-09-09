@@ -16,9 +16,16 @@ jobs:
       - name: Install uv
         uses: astral-sh/setup-uv@v6
 
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
+      - name: Install the project
+        run: uv sync --all-extras --all-groups
+
       - name: Run tests
         run: |
-          uv sync --all-groups
           mkdir -p htmldoc/nixpack_template
           uv run pytest
           uv run pdoc --html --force --config latex_math=True -o htmldoc nixpack_template
@@ -26,6 +33,19 @@ jobs:
           uv run coverage xml -o htmldoc/coverage/coverage.xml --rcfile tests/coverage.conf
           uv run docstr-coverage src/nixpack_template -miP -sp -is -idel --skip-file-doc --badge=htmldoc/nixpack_template/doc_badge.svg
           uv run genbadge coverage -l -i htmldoc/coverage/coverage.xml -o htmldoc/nixpack_template/cov_badge.svg
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Upload entire repository
+          path: 'htmldoc'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       # Install nixpacks (via cargo)
       - name: Install Nixpacks
