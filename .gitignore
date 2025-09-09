@@ -4,6 +4,7 @@
 migrations
 .gradio
 Maildir/
+htmldoc/
 .nixpacks/
 emails
 *.db

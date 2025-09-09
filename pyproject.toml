@@ -54,3 +54,17 @@ test = [
     "pytest-xdist>=3.6.1",
     "httpx>=0.28.1",
 ]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+    "--html=htmldoc/tests/report.html",
+    "--self-contained-html",
+    "--junitxml=htmldoc/junit.xml",
+    "--cov-config=tests/coverage.conf",
+    "--cov=nixpack_template",
+    "--doctest-modules",
+]
+testpaths = [
+    "tests/",
+]
