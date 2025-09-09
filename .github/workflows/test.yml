@@ -19,7 +19,13 @@ jobs:
       - name: Run tests
         run: |
           uv sync --frozen --group test
+          mkdir -p htmldoc/nixpack_template
           uv run pytest
+          uv run pdoc --html --force --config latex_math=True -o htmldoc nixpack_template
+          uv run coverage html -d htmldoc/coverage --rcfile tests/coverage.conf
+          uv run coverage xml -o htmldoc/coverage/coverage.xml --rcfile tests/coverage.conf
+          uv run docstr-coverage src/nixpack_template -miP -sp -is -idel --skip-file-doc --badge=htmldoc/nixpack_template/doc_badge.svg
+          uv run genbadge coverage -l -i htmldoc/coverage/coverage.xml -o htmldoc/nixpack_template/cov_badge.svg
 
       # Install nixpacks (via cargo)
       - name: Install Nixpacks
