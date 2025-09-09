@@ -18,6 +18,6 @@ This project provides a clean starting point with best practices for reproducibi
 ## 🚀 Getting Started
 
 ### 1. Clone this template
-```bash
-git clone https://github.com/johncloud-paas/stacks/nixpack_template
-cd nixpack_template
+
+    git clone https://github.com/johncloud-paas/stacks/nixpack_template
+    cd nixpack_template

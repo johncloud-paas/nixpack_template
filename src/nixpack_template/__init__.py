@@ -2,15 +2,15 @@
 
 .. include:: ../../README.md
 
-# Testing
+## Testing
 
-## Run the tests
+### Run the tests
 
 To run tests, just run:
 
     uv run pytest
 
-## Test reports
+### Test reports
 
 [See test report](../tests/report.html)
 
