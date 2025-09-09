@@ -23,6 +23,7 @@ max-line-length = 100
 
 [tool.pdm.version]
 source = "scm"
+tag_scheme = "node-and-timestamp"  # or "node-and-date", "dirty-tag"
 
 [tool.black]
 line-length = 100
