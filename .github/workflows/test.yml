@@ -1,0 +1,30 @@
+name: Test Nixpacks Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  test-nixpack:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Install nixpacks (via cargo)
+      - name: Install Nixpacks
+        run: |
+          curl -fsSL https://nixpacks.com/install.sh | bash
+          nixpacks --version
+
+      # Build Docker image with Nixpacks
+      - name: Build image
+        run: |
+          nixpacks build . -t myapp:latest
+
+      # Run tests inside the container
+      - name: Run tests
+        run: |
+          docker run --rm  myapp sh -c "curl localhost:3000"
