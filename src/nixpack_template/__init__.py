@@ -2,6 +2,8 @@
 
 .. include:: ../../README.md
 
+---
+
 ## ⚙️ Testing
 
 ### Run the tests
