@@ -600,7 +600,7 @@ wheels = [
 
 [[package]]
 name = "nixpack-template"
-version = "0.2.dev2+g0f749e9.d20250909"
+version = "0.2.dev6+gfc355b5.d20250909"
 source = { editable = "." }
 dependencies = [
     { name = "fastapi", extra = ["standard"] },
@@ -618,6 +618,7 @@ doc = [
     { name = "pylint" },
 ]
 test = [
+    { name = "httpx" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
     { name = "pytest-cov" },
@@ -647,6 +648,7 @@ doc = [
     { name = "pylint", specifier = ">=3.3.2" },
 ]
 test = [
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "pytest", specifier = ">=8.3.4" },
     { name = "pytest-asyncio", specifier = ">=0.25.0" },
     { name = "pytest-cov", specifier = ">=6.0.0" },

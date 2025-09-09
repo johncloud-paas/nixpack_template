@@ -13,6 +13,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Run tests
+        run: |
+          uv sync --frozen --group test
+          uv run pytest
+
       # Install nixpacks (via cargo)
       - name: Install Nixpacks
         run: |
