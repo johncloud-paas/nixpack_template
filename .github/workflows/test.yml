@@ -22,7 +22,7 @@ jobs:
           python-version-file: "pyproject.toml"
 
       - name: Install the project
-        run: uv sync --all-extras --all-groups
+        run: PDM_BUILD_SCM_VERSION=1.0.0 uv sync --all-extras --all-groups
 
       - name: Run tests
         run: |
