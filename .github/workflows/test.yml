@@ -18,7 +18,7 @@ jobs:
 
       - name: Run tests
         run: |
-          uv sync --frozen --group test
+          uv sync --all-groups
           mkdir -p htmldoc/nixpack_template
           uv run pytest
           uv run pdoc --html --force --config latex_math=True -o htmldoc nixpack_template

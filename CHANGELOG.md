@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Added
 
-- Added unit tests ([601e76e](https://github.com/johncloud-paas/nixpack_template/commit/601e76e2724e3d2c9b58a474144fa0ae95948515) by Yann de The).
+- Added unit tests ([60cb583](https://github.com/johncloud-paas/nixpack_template/commit/60cb583471d89d99168da7fb6c4757ee885bd4be) by Yann de The).
 - Added tests ([4949299](https://github.com/johncloud-paas/nixpack_template/commit/4949299b4760f95fe1d1fe1d754c2b9a913489c9) by Yann de The).
 - Added test github action ([fc355b5](https://github.com/johncloud-paas/nixpack_template/commit/fc355b5c5e5ed5abe58b39c3f560d15281654400) by Yann de The).
 - Added _version.py ([80b1c0b](https://github.com/johncloud-paas/nixpack_template/commit/80b1c0b2a04a0c44e663171993221560333b231e) by Yann de The).
